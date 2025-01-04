@@ -1,0 +1,6 @@
+# ninja log v6
+6	1027	1735960815220257755	CMakeFiles/todo_program.dir/listItem.cpp.o	d6852376ddefce97
+1	665	1735963541176232860	CMakeFiles/todo_program.dir/listItem.cpp.o	d6852376ddefce97
+1	667	1735963541176862214	CMakeFiles/todo_program.dir/main.cpp.o	fbcb4255b60219d2
+2	693	1735963541177299437	CMakeFiles/todo_program.dir/todoList.cpp.o	5aa50a09b4320a96
+693	830	1735963541868334086	todo_program	c9f93642ee7b4eab

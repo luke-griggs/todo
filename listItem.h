@@ -9,7 +9,9 @@ public:
     listItem(string name);
     ~listItem() = default;
     void display();
+    int setName(string name);
     string getName();
+
 
 private:
     string name;

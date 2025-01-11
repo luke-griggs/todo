@@ -17,9 +17,11 @@ public:
     ~todoList() = default;
     int addItem(string itemName);
     int removeItem(int itemNumber);
+    int editItem(int itemNumber, string newTaskName);
     void listItems();
     void run();
     void help();
+
 
 private:
     vector<listItem*> list;

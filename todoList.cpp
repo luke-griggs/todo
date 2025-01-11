@@ -26,6 +26,22 @@ int todoList::removeItem(int itemNumber) {
     return SUCCESS;
 }
 
+int todoList::editItem(int itemNumber, string newTaskName) {
+    if (itemNumber < 1 || itemNumber > this->size) {
+        cout << "the number entered is outside the range of the list" << endl;
+        return FAILURE;
+    }
+
+    int idx = itemNumber - 1;
+    listItem* item_ptr = list[idx];
+
+    if (item_ptr->setName(newTaskName) == SUCCESS) {
+        return SUCCESS;
+    }
+    return FAILURE;
+}
+
+
 void todoList::listItems() {
     if (list.size() > 0) {
         cout << "here are the items on your to-do list" << endl;
@@ -83,6 +99,18 @@ void todoList::run() {
                     cout << "an error occurred while removing that item" << endl;
                 }
 
+            } else if(firstWord == "edit"){
+                int numToEdit;
+                ss >> numToEdit;
+                cout << "please enter the new name of the task" << endl;
+                string newTaskName;
+                cin >> newTaskName;
+
+                if (editItem(numToEdit, newTaskName) == SUCCESS) {
+                    cout << "Item modified successfully" << endl;
+                } else {
+                    cout << "an error occurred while editing the item" << endl;
+                }
             } else {
                 cout << "invalid argument" << endl;
                 help();
